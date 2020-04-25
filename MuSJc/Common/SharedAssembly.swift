@@ -37,5 +37,20 @@ class SharedAssesmbly: Assembly {
 		container.autoregister(TopViewControllerProviderProtocol.self, initializer: TopViewControllerProvider.init)
 		
 		
+		
+		// Root View
+		container.register(UIApplicationProtocol.self) { _ in UIApplication.shared }
+		container.register(RootNavigatorRouterProtocol.self) {
+			return RootNavigatorRouter(application: $0 ~> (UIApplicationProtocol.self),
+									   homeStoryboard: $0 ~> (Storyboard.self, name: "Home"),
+									   authenticationStoryboard: $0 ~> (Storyboard.self, name: "Home")) // To do: change Home to Authentication
+		}
+		container.register(RootNavigatorProtocol.self) {
+			return RootNavigator(router: $0 ~> RootNavigatorRouterProtocol.self)
+		}
+		
+		container.register(Storyboard.self, name: "Home") {_ in
+			return HomeStoryboard(shareContainer: self.shareContainer, assembly: HomeAssembly())
+		}
 	}
 }

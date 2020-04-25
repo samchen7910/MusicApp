@@ -10,13 +10,15 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+	private lazy var app = MuSJcApp()
 	var window: UIWindow?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		window = UIWindow(frame: UIScreen.main.bounds)
-		window?.makeKeyAndVisible()
-		window?.rootViewController = ViewController()
+		if !isRunningUnitTests {
+			window = UIWindow(frame: UIScreen.main.bounds)
+			window?.makeKeyAndVisible()
+			app.prepare()
+		}
 		return true
 	}
 

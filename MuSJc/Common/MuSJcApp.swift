@@ -11,14 +11,10 @@ import Swinject
 import SwinjectAutoregistration
 import RxSwift
 
-protocol MuSJcAppProtocol {
-	
-}
-
-class MuSJcApp: MuSJcAppProtocol {
+class MuSJcApp {
 	
 	// MARK: - Private
-//	private let rootNavigator:
+	private let rootNavigator: RootNavigatorProtocol
 	private let firebase: ApplicationFirebaseProtocol
 	private var iqKeyboardManager: IQKeyboardManagerProtocol
 	private let application: UIApplicationProtocol
@@ -26,10 +22,12 @@ class MuSJcApp: MuSJcAppProtocol {
 	
 	init(firebase: ApplicationFirebaseProtocol,
 		 iqKeyboardManager: IQKeyboardManagerProtocol,
-		 application: UIApplicationProtocol) {
+		 application: UIApplicationProtocol,
+		 rootNavigator: RootNavigatorProtocol) {
 		self.firebase = firebase
 		self.iqKeyboardManager = iqKeyboardManager
 		self.application = application
+		self.rootNavigator = rootNavigator
 	}
 	
 	convenience init() {
@@ -40,15 +38,18 @@ class MuSJcApp: MuSJcAppProtocol {
 		let iqKeyboardManager = shareContainer ~> IQKeyboardManagerProtocol.self
 		let firebase = shareContainer ~> ApplicationFirebaseProtocol.self
 		let application = shareContainer ~> UIApplicationProtocol.self
+		let rootNavigator = shareContainer ~> RootNavigatorProtocol.self
 		
 		self.init(firebase: firebase,
 		iqKeyboardManager: iqKeyboardManager,
-		application: application)
+		application: application,
+		rootNavigator: rootNavigator)
 	}
 	
 	func prepare() {
 		iqKeyboardManager.enable = true
 		iqKeyboardManager.enableAutoToolbar = false
 		iqKeyboardManager.shouldResignOnTouchOutside = true
+		rootNavigator.setRootViewController()
 	}
 }
