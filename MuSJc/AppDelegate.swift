@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return true
 	}
 
-
 }
 
+// MARK: - Global Properties
+// This global variable used to determine if the app is running tests.
+var isRunningUnitTests: Bool {
+	let environment = ProcessInfo.processInfo.environment
+	if environment["APP_IS_RUNNING_TEST"] == "YES" {
+		return true
+	} else { return false }
+}
