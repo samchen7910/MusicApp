@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerCustomView" customModule="MuSJc" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Gsx-tf-nM6"/>
+                <outlet property="discImageView" destination="WGF-5c-TEN" id="aiv-84-kxs"/>
+                <outlet property="needleContainerView" destination="kfV-qq-PRe" id="qhA-n9-X8Y"/>
+                <outlet property="needleView" destination="ccZ-oJ-UeU" id="G4e-U1-Miy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="381"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oF-sS-HH7">
+                    <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disc" translatesAutoresizingMaskIntoConstraints="NO" id="WGF-5c-TEN">
+                            <rect key="frame" x="0.0" y="10" width="280" height="280"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="280" id="PKX-aD-tnX"/>
+                                <constraint firstAttribute="width" secondItem="WGF-5c-TEN" secondAttribute="height" id="ivE-La-DiR"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjc-Wn-oYi">
+                            <rect key="frame" x="356" y="10" width="50" height="50"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="tjc-Wn-oYi" secondAttribute="height" multiplier="1:1" id="44m-Dd-37C"/>
+                                <constraint firstAttribute="height" constant="50" id="HOB-dY-xij"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfV-qq-PRe">
+                            <rect key="frame" x="371" y="-115" width="20" height="300"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccZ-oJ-UeU">
+                                    <rect key="frame" x="0.0" y="150" width="20" height="150"/>
+                                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="JCg-94-DcP"/>
+                                        <constraint firstAttribute="height" constant="150" id="jFh-Ob-UqX"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ccZ-oJ-UeU" firstAttribute="centerX" secondItem="kfV-qq-PRe" secondAttribute="centerX" id="Q3B-Ak-zpE"/>
+                                <constraint firstAttribute="bottom" secondItem="ccZ-oJ-UeU" secondAttribute="bottom" id="dNh-LL-NwV"/>
+                                <constraint firstAttribute="height" constant="300" id="jY7-xH-II6"/>
+                                <constraint firstAttribute="width" constant="20" id="kJf-Go-Ylo"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="kfV-qq-PRe" firstAttribute="centerY" secondItem="tjc-Wn-oYi" secondAttribute="centerY" id="2sY-70-c2X"/>
+                        <constraint firstItem="kfV-qq-PRe" firstAttribute="centerX" secondItem="tjc-Wn-oYi" secondAttribute="centerX" id="3tt-aP-OQF"/>
+                        <constraint firstAttribute="height" constant="300" id="VdI-8u-Wis"/>
+                        <constraint firstItem="WGF-5c-TEN" firstAttribute="leading" secondItem="9oF-sS-HH7" secondAttribute="leading" id="ZPZ-y7-7B6"/>
+                        <constraint firstAttribute="trailing" secondItem="tjc-Wn-oYi" secondAttribute="trailing" constant="8" id="cZb-XI-Q0d"/>
+                        <constraint firstItem="tjc-Wn-oYi" firstAttribute="top" secondItem="WGF-5c-TEN" secondAttribute="top" id="kZg-mH-tJA"/>
+                        <constraint firstItem="WGF-5c-TEN" firstAttribute="centerY" secondItem="9oF-sS-HH7" secondAttribute="centerY" id="sSn-hT-Nc0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="9oF-sS-HH7" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="43d-Ex-obg"/>
+                <constraint firstItem="9oF-sS-HH7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="4ip-mR-6m3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9oF-sS-HH7" secondAttribute="trailing" id="8O1-mJ-D93"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-43.861607142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Disc" width="1024" height="1024"/>
+    </resources>
+</document>
