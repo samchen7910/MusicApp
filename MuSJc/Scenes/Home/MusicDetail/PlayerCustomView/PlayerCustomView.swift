@@ -10,6 +10,7 @@ import UIKit
 
 class PlayerCustomView: UIView, CustomViewProtocol {
 	
+	// MARK: - Outlet
 	@IBOutlet var contentView: UIView!
 	@IBOutlet weak var needleContainerView: UIView!
 	@IBOutlet weak var needleView: UIView! {
@@ -18,7 +19,10 @@ class PlayerCustomView: UIView, CustomViewProtocol {
 		}
 	}
 	@IBOutlet weak var discImageView: UIImageView!
-	var isAllowedSpin = false 
+	
+	// MARK: - Private
+	private var isPlaying = false
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		commonInit(for: "PlayerCustomView")
@@ -30,8 +34,8 @@ class PlayerCustomView: UIView, CustomViewProtocol {
 	}
 	
 	@objc func needleTapped() {
-		isAllowedSpin.toggle()
-		if isAllowedSpin {
+		isPlaying.toggle()
+		if isPlaying {
 			UIView.animate(withDuration: 0.5, animations: {
 				self.needleContainerView.transform = CGAffineTransform(rotationAngle: .pi/4)
 			}) { _ in
@@ -45,5 +49,4 @@ class PlayerCustomView: UIView, CustomViewProtocol {
 			}
 		}
 	}
-	
 }

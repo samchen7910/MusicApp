@@ -12,8 +12,7 @@ import SwinjectAutoregistration
 class HomeAssembly: Assembly {
 	
 	func assemble(container: Container) {
-		
-		
+
 	}
 }
 

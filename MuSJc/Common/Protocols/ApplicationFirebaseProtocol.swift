@@ -17,6 +17,6 @@ protocol ApplicationFirebaseProtocol {
 class ApplicationFirebase: ApplicationFirebaseProtocol {
 	
 	func prepare() {
-		FirebaseApp.configure()
+//		FirebaseApp.configure()
 	}
 }

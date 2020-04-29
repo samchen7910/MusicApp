@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicDetailView" customModule="MuSJc" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="DBX-mR-Hig" id="aeB-jo-TTZ"/>
+                <outlet property="bigPlayerView" destination="PUY-eu-wq2" id="5Qz-uR-vxd"/>
+                <outlet property="containerView" destination="nft-cY-aiK" id="ctv-ww-AfQ"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="cS1-yd-3rJ"/>
+                <outlet property="overlayView" destination="7rD-3p-nfd" id="Y7D-wO-tt2"/>
+                <outlet property="smallerPlayerView" destination="AsK-mQ-JWW" id="63D-h0-XHz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rD-3p-nfd">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nft-cY-aiK">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DBX-mR-Hig">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUY-eu-wq2" customClass="PlayerCustomView" customModule="MuSJc" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="PUY-eu-wq2" firstAttribute="top" secondItem="DBX-mR-Hig" secondAttribute="top" id="7qX-QC-Vef"/>
+                        <constraint firstItem="DBX-mR-Hig" firstAttribute="top" secondItem="nft-cY-aiK" secondAttribute="top" id="HNL-uI-CQY"/>
+                        <constraint firstItem="DBX-mR-Hig" firstAttribute="leading" secondItem="nft-cY-aiK" secondAttribute="leading" id="Hb7-7I-W30"/>
+                        <constraint firstItem="PUY-eu-wq2" firstAttribute="leading" secondItem="DBX-mR-Hig" secondAttribute="leading" id="OBI-02-Lk2"/>
+                        <constraint firstItem="PUY-eu-wq2" firstAttribute="trailing" secondItem="DBX-mR-Hig" secondAttribute="trailing" id="Y9H-rO-bdS"/>
+                        <constraint firstItem="PUY-eu-wq2" firstAttribute="bottom" secondItem="DBX-mR-Hig" secondAttribute="bottom" id="d2L-1x-Wns"/>
+                        <constraint firstAttribute="bottom" secondItem="DBX-mR-Hig" secondAttribute="bottom" id="w7u-vh-6QD"/>
+                        <constraint firstAttribute="trailing" secondItem="DBX-mR-Hig" secondAttribute="trailing" id="zei-OL-SHE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsK-mQ-JWW" customClass="SmallPlayerCustomView" customModule="MuSJc" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="772" width="414" height="90"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="JYW-sk-zgw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7rD-3p-nfd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6g4-OP-y9u"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7rD-3p-nfd" secondAttribute="trailing" id="GZ2-Vx-9cB"/>
+                <constraint firstItem="AsK-mQ-JWW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K8g-pw-cCi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AsK-mQ-JWW" secondAttribute="trailing" id="Ken-cn-oad"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7rD-3p-nfd" secondAttribute="bottom" id="XZf-Hq-VMV"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nft-cY-aiK" secondAttribute="bottom" id="cAp-qo-hpw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AsK-mQ-JWW" secondAttribute="bottom" id="cU7-QI-AN9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nft-cY-aiK" secondAttribute="trailing" id="edf-Lc-Aav"/>
+                <constraint firstItem="nft-cY-aiK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="otv-Im-vXW"/>
+                <constraint firstItem="7rD-3p-nfd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="rqx-ix-30h"/>
+                <constraint firstItem="nft-cY-aiK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v8T-k6-NzX"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="127"/>
+        </view>
+    </objects>
+</document>

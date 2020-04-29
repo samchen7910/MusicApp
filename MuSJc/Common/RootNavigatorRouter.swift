@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Swinject
+import SwinjectAutoregistration
 
 //sourcery: AutoMockable
 protocol RootNavigatorRouterProtocol {
@@ -20,23 +22,28 @@ class RootNavigatorRouter: RootNavigatorRouterProtocol {
 	}
 	
 	private var application: UIApplicationProtocol
-	private let homeStoryboard: Storyboard
 	private let authenticationStoryboard: Storyboard
 	
 	init(application: UIApplicationProtocol,
-		 homeStoryboard: Storyboard,
 		 authenticationStoryboard: Storyboard) {
 		self.application = application
-		self.homeStoryboard = homeStoryboard
 		self.authenticationStoryboard = authenticationStoryboard
 	}
 	
 	func route(to scene: Scene) {
 		switch scene {
 		case .home:
-			application.rootViewController = homeStoryboard.initial()
+			let sharedAssesmbly = SharedAssesmbly()
+			let sharedContainer = sharedAssesmbly.shareContainer
+			sharedAssesmbly.assemble(container: sharedContainer)
+			guard let tabbar = sharedContainer.resolve(TabBarViewController.self) else {
+				return assertionFailure("Failed")
+			}
+			application.rootViewController = tabbar
 		case .login:
 			application.rootViewController = authenticationStoryboard.initial()
 		}
 	}
+	
+	
 }
