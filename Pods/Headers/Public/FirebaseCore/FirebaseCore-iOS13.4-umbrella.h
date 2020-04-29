@@ -1,0 +1,1 @@
+../../../Target Support Files/FirebaseCore-iOS13.4/FirebaseCore-iOS13.4-umbrella.h

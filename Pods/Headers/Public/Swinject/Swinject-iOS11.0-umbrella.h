@@ -1,0 +1,1 @@
+../../../Target Support Files/Swinject-iOS11.0/Swinject-iOS11.0-umbrella.h

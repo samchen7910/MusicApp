@@ -1,0 +1,1 @@
+../../../Target Support Files/IQKeyboardManagerSwift-iOS13.4/IQKeyboardManagerSwift-iOS13.4-umbrella.h

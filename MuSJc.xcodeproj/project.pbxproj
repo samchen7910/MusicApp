@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2831691027D54BFFE628F4B6 /* libPods-MuSJcTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AEBEE90D858F49ADC511C8 /* libPods-MuSJcTests.a */; };
-		C0FA20D8F88C41A50FDA48AF /* libPods-MuSJc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 830A84149AF2740EB34B59A6 /* libPods-MuSJc.a */; };
+		139C25F29EE977794ACF9819 /* libPods-MuSJc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F25D1E358ABC37883C3A1831 /* libPods-MuSJc.a */; };
+		D04206DFDCEED73F368EA727 /* libPods-MuSJcTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBD809108893D6ADA8F2BD58 /* libPods-MuSJcTests.a */; };
 		E8875C3A24546F8800A6FA62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8875C3924546F8800A6FA62 /* AppDelegate.swift */; };
 		E8875C4124546F8800A6FA62 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8875C3F24546F8800A6FA62 /* Home.storyboard */; };
 		E8875C4324546F8A00A6FA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8875C4224546F8A00A6FA62 /* Assets.xcassets */; };
@@ -60,11 +60,10 @@
 
 /* Begin PBXFileReference section */
 		13EC066F6C1195B76E4E09BB /* Pods-MuSJc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuSJc.debug.xcconfig"; path = "Target Support Files/Pods-MuSJc/Pods-MuSJc.debug.xcconfig"; sourceTree = "<group>"; };
-		63AEBEE90D858F49ADC511C8 /* libPods-MuSJcTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuSJcTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1E937E416B368FDDFDDDE3 /* Pods-MuSJcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuSJcTests.release.xcconfig"; path = "Target Support Files/Pods-MuSJcTests/Pods-MuSJcTests.release.xcconfig"; sourceTree = "<group>"; };
 		83066F8CD6080437CE801CE6 /* Pods-MuSJc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuSJc.release.xcconfig"; path = "Target Support Files/Pods-MuSJc/Pods-MuSJc.release.xcconfig"; sourceTree = "<group>"; };
-		830A84149AF2740EB34B59A6 /* libPods-MuSJc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuSJc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C44A6C20B4F53635ADA909 /* Pods-MuSJcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuSJcTests.debug.xcconfig"; path = "Target Support Files/Pods-MuSJcTests/Pods-MuSJcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BBD809108893D6ADA8F2BD58 /* libPods-MuSJcTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuSJcTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8875C3624546F8800A6FA62 /* MuSJc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuSJc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8875C3924546F8800A6FA62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8875C4024546F8800A6FA62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		E8875CB12458CC8D00A6FA62 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		E8875CB32458CCC800A6FA62 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		E8875CB5245A335200A6FA62 /* SongDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailViewController.swift; sourceTree = "<group>"; };
+		F25D1E358ABC37883C3A1831 /* libPods-MuSJc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuSJc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0FA20D8F88C41A50FDA48AF /* libPods-MuSJc.a in Frameworks */,
+				139C25F29EE977794ACF9819 /* libPods-MuSJc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2831691027D54BFFE628F4B6 /* libPods-MuSJcTests.a in Frameworks */,
+				D04206DFDCEED73F368EA727 /* libPods-MuSJcTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +142,8 @@
 		86AEA559A042548278435277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				830A84149AF2740EB34B59A6 /* libPods-MuSJc.a */,
-				63AEBEE90D858F49ADC511C8 /* libPods-MuSJcTests.a */,
+				F25D1E358ABC37883C3A1831 /* libPods-MuSJc.a */,
+				BBD809108893D6ADA8F2BD58 /* libPods-MuSJcTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -362,7 +362,7 @@
 				E8875C4824546F8B00A6FA62 /* Sources */,
 				E8875C4924546F8B00A6FA62 /* Frameworks */,
 				E8875C4A24546F8B00A6FA62 /* Resources */,
-				F269CAEE35BC718C46484EAE /* [CP] Copy Pods Resources */,
+				FCFE6B8E7E35DAEC9D6F6DB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -480,7 +480,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F269CAEE35BC718C46484EAE /* [CP] Copy Pods Resources */ = {
+		FCFE6B8E7E35DAEC9D6F6DB9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
