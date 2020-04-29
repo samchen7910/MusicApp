@@ -12,7 +12,7 @@ protocol SongDetailViewControllerDelegate: class {
 	func minimizeWindow(minimized: Bool, animated: Bool)
 }
 
-protocol SongDetailViewControllerProtocl: class, UIViewControllerRouting {
+protocol SongDetailViewControllerProtocol: class, UIViewControllerRouting {
 	
 }
 
@@ -37,4 +37,8 @@ extension SongDetailViewController: MusicDetailViewDelegate {
 	func minimizeWindow(minimized: Bool, animated: Bool) {
 		delegate?.minimizeWindow(minimized: minimized, animated: animated)
 	}
+}
+
+extension SongDetailViewController: SongDetailViewControllerProtocol {
+	
 }

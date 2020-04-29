@@ -12,16 +12,13 @@ enum HomeStoryboardId: StoryboardId {
 	
 	case detail
 	case list
-	case tabBar
 	
 	var identifier: String {
 		switch self {
 		case .detail:
-			return ""
+			return "SongDetailViewController"
 		case .list:
 			return "ListViewController"
-		case .tabBar:
-			return "TabBarViewController"
 		}
 	}
 }

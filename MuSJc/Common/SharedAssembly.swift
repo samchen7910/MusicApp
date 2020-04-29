@@ -62,12 +62,9 @@ class SharedAssesmbly: Assembly {
 			return vc
 		}
 		
-
 		
-
 		container.register(RootNavigatorRouterProtocol.self) {
 			return RootNavigatorRouter(application: $0 ~> (UIApplicationProtocol.self),
-									   
 									   authenticationStoryboard: $0 ~> (Storyboard.self, name: "Home")) // To do: change Home to Authentication
 		}
 		
@@ -96,17 +93,9 @@ class SharedAssesmbly: Assembly {
 			return vc
 		}
 		
-		
 		container.register(RootNavigatorProtocol.self) {
 			return RootNavigator(router: $0 ~> RootNavigatorRouterProtocol.self)
 		}
 		
-	
-		
-		
-		
-	
-		
-	
 	}
 }
