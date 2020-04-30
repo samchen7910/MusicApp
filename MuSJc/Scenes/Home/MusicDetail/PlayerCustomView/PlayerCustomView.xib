@@ -72,7 +72,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="P93-TT-a0k">
-                    <rect key="frame" x="42.5" y="354" width="339" height="244.5"/>
+                    <rect key="frame" x="42.5" y="354" width="339" height="234.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Time Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TB8-Rx-Yi8">
                             <rect key="frame" x="110" y="0.0" width="119" height="24"/>
@@ -93,8 +93,8 @@
                                 <constraint firstAttribute="height" constant="20" id="X1V-ni-7Bo"/>
                             </constraints>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yJj-S4-n8I">
-                            <rect key="frame" x="84.5" y="124.5" width="170" height="120"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yJj-S4-n8I">
+                            <rect key="frame" x="84.5" y="124.5" width="170" height="110"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zLX-ZL-y46">
                                     <rect key="frame" x="0.0" y="0.0" width="170" height="70"/>
@@ -122,7 +122,7 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9a-Nj-akk">
-                                    <rect key="frame" x="51.5" y="90" width="67" height="30"/>
+                                    <rect key="frame" x="51.5" y="80" width="67" height="30"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="See lyrics"/>
                                 </button>

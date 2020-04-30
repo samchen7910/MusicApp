@@ -25,7 +25,7 @@ class SmallPlayerCustomView: UIView, CustomViewProtocol {
 	}
 	
 	private var isPlaying = false
-	private var delegate: SmallPlayerCustomViewDelegate?
+	private weak var delegate: SmallPlayerCustomViewDelegate?
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -36,7 +36,7 @@ class SmallPlayerCustomView: UIView, CustomViewProtocol {
 		super.init(coder: aDecoder)
 		commonInit(for: "SmallPlayerCustomView")
 	}
-
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		discImageView.layer.cornerRadius = discImageView.frame.height/2

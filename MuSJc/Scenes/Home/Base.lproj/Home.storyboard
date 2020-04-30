@@ -57,6 +57,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-P4-n3G">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-7j-mRB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-b1-Dbq">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
@@ -90,7 +97,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="8qt-GZ-GV6"/>
                                     <constraint firstItem="aIJ-mA-UhJ" firstAttribute="width" secondItem="ReL-b1-Dbq" secondAttribute="width" multiplier="0.9" id="IKH-1M-eCt"/>
@@ -100,23 +107,32 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-jb-m3l" customClass="MusicDetailView" customModule="MuSJc" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qcl-7j-mRB" firstAttribute="trailing" secondItem="9uw-P4-n3G" secondAttribute="trailing" id="ABu-g1-qvB"/>
                             <constraint firstItem="rSj-G8-v9B" firstAttribute="trailing" secondItem="Bcg-jb-m3l" secondAttribute="trailing" id="Bat-Mk-ISj"/>
+                            <constraint firstItem="9uw-P4-n3G" firstAttribute="top" secondItem="qd4-DQ-k0m" secondAttribute="top" id="CzQ-U5-sfW"/>
                             <constraint firstItem="Bcg-jb-m3l" firstAttribute="top" secondItem="ReL-b1-Dbq" secondAttribute="bottom" id="EIe-sV-nE8"/>
+                            <constraint firstItem="rSj-G8-v9B" firstAttribute="trailing" secondItem="9uw-P4-n3G" secondAttribute="trailing" id="ERa-Wk-MzS"/>
+                            <constraint firstItem="rSj-G8-v9B" firstAttribute="bottom" secondItem="9uw-P4-n3G" secondAttribute="bottom" id="GCP-NG-eF1"/>
                             <constraint firstItem="rSj-G8-v9B" firstAttribute="trailing" secondItem="ReL-b1-Dbq" secondAttribute="trailing" id="JO0-bA-kGE"/>
+                            <constraint firstItem="qcl-7j-mRB" firstAttribute="bottom" secondItem="9uw-P4-n3G" secondAttribute="bottom" id="Jll-ZO-NPJ"/>
+                            <constraint firstItem="qcl-7j-mRB" firstAttribute="leading" secondItem="9uw-P4-n3G" secondAttribute="leading" id="Lo9-3i-oxt"/>
                             <constraint firstItem="Bcg-jb-m3l" firstAttribute="leading" secondItem="rSj-G8-v9B" secondAttribute="leading" id="aIx-3E-ibf"/>
                             <constraint firstItem="ReL-b1-Dbq" firstAttribute="top" secondItem="rSj-G8-v9B" secondAttribute="top" id="iCy-hN-w38"/>
+                            <constraint firstItem="qcl-7j-mRB" firstAttribute="top" secondItem="9uw-P4-n3G" secondAttribute="top" id="kWe-Xg-JNy"/>
                             <constraint firstItem="rSj-G8-v9B" firstAttribute="bottom" secondItem="Bcg-jb-m3l" secondAttribute="bottom" id="plN-GB-6O8"/>
                             <constraint firstItem="ReL-b1-Dbq" firstAttribute="leading" secondItem="rSj-G8-v9B" secondAttribute="leading" id="qIW-gJ-sJu"/>
+                            <constraint firstItem="9uw-P4-n3G" firstAttribute="leading" secondItem="rSj-G8-v9B" secondAttribute="leading" id="ult-fg-1E2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rSj-G8-v9B"/>
                     </view>
                     <connections>
                         <outlet property="musicDetailView" destination="Bcg-jb-m3l" id="Y1n-Ro-QEe"/>
+                        <outlet property="overlayView" destination="qcl-7j-mRB" id="217-a3-LsL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxT-KI-07E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,6 +141,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="1920" height="1080"/>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="see_all" width="200" height="200"/>
         <namedColor name="appGray">

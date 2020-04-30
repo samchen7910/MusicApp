@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicDetailView" customModule="MuSJc" customModuleProvider="target">
             <connections>
-                <outlet property="backgroundImageView" destination="DBX-mR-Hig" id="aeB-jo-TTZ"/>
                 <outlet property="bigPlayerView" destination="PUY-eu-wq2" id="5Qz-uR-vxd"/>
                 <outlet property="containerView" destination="nft-cY-aiK" id="ctv-ww-AfQ"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="cS1-yd-3rJ"/>
@@ -25,29 +24,22 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rD-3p-nfd">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nft-cY-aiK">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DBX-mR-Hig">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                        </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PUY-eu-wq2" customClass="PlayerCustomView" customModule="MuSJc" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="PUY-eu-wq2" firstAttribute="top" secondItem="DBX-mR-Hig" secondAttribute="top" id="7qX-QC-Vef"/>
-                        <constraint firstItem="DBX-mR-Hig" firstAttribute="top" secondItem="nft-cY-aiK" secondAttribute="top" id="HNL-uI-CQY"/>
-                        <constraint firstItem="DBX-mR-Hig" firstAttribute="leading" secondItem="nft-cY-aiK" secondAttribute="leading" id="Hb7-7I-W30"/>
-                        <constraint firstItem="PUY-eu-wq2" firstAttribute="leading" secondItem="DBX-mR-Hig" secondAttribute="leading" id="OBI-02-Lk2"/>
-                        <constraint firstItem="PUY-eu-wq2" firstAttribute="trailing" secondItem="DBX-mR-Hig" secondAttribute="trailing" id="Y9H-rO-bdS"/>
-                        <constraint firstItem="PUY-eu-wq2" firstAttribute="bottom" secondItem="DBX-mR-Hig" secondAttribute="bottom" id="d2L-1x-Wns"/>
-                        <constraint firstAttribute="bottom" secondItem="DBX-mR-Hig" secondAttribute="bottom" id="w7u-vh-6QD"/>
-                        <constraint firstAttribute="trailing" secondItem="DBX-mR-Hig" secondAttribute="trailing" id="zei-OL-SHE"/>
+                        <constraint firstItem="PUY-eu-wq2" firstAttribute="leading" secondItem="nft-cY-aiK" secondAttribute="leading" id="5lF-d0-LlZ"/>
+                        <constraint firstAttribute="bottom" secondItem="PUY-eu-wq2" secondAttribute="bottom" id="RrU-wL-gzr"/>
+                        <constraint firstItem="PUY-eu-wq2" firstAttribute="top" secondItem="nft-cY-aiK" secondAttribute="top" id="YVS-QG-GmE"/>
+                        <constraint firstAttribute="trailing" secondItem="PUY-eu-wq2" secondAttribute="trailing" id="YZP-3v-Hgg"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsK-mQ-JWW" customClass="SmallPlayerCustomView" customModule="MuSJc" customModuleProvider="target">

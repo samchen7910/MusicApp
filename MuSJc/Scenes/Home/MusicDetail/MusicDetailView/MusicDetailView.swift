@@ -21,9 +21,7 @@ class MusicDetailView: UIView, CustomViewProtocol {
 		}
 	}
 	
-	@IBOutlet weak var containerView: UIView!
-	
-	@IBOutlet weak var backgroundImageView: UIImageView!
+	@IBOutlet weak var containerView: UIView!	
 	@IBOutlet weak var bigPlayerView: PlayerCustomView!
 	@IBOutlet weak var smallerPlayerView: SmallPlayerCustomView! {
 		didSet {
@@ -62,12 +60,14 @@ class MusicDetailView: UIView, CustomViewProtocol {
 	
 	func swipeDownAction() {
 		print("swipe down")
+		bigPlayerView.isUserInteractionEnabled = false
 		setAnimation(isSwipeDown: true)
 		delegate?.minimizeWindow(minimized: true, animated: true)
 	}
 	
 	func swipeUpAction() {
 		print("swipe up")
+		bigPlayerView.isUserInteractionEnabled = true
 		setAnimation(isSwipeDown: false)
 		delegate?.minimizeWindow(minimized: false, animated: true)
 	}
