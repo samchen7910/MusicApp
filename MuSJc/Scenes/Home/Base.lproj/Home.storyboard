@@ -27,12 +27,12 @@
         <!--List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ListViewController" id="BYZ-38-t0r" customClass="ListViewController" customModule="MuSJc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" id="BYZ-38-t0r" customClass="ListViewController" customModule="MuSJc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VHA-kJ-bXk">
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VHA-kJ-bXk">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ile-he-vjm">
@@ -43,30 +43,18 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-qc-CDR">
-                                <rect key="frame" x="0.0" y="362" width="414" height="500"/>
-                                <color key="backgroundColor" name="appGray"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="stB-sa-L8H"/>
-                                </constraints>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5Oz-qc-CDR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ck4-iW-UbR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Oz-qc-CDR" secondAttribute="bottom" id="JsU-OM-eVe"/>
                             <constraint firstItem="VHA-kJ-bXk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SoF-rK-yq7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VHA-kJ-bXk" secondAttribute="bottom" id="VDR-gk-4l7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VHA-kJ-bXk" secondAttribute="trailing" id="c6n-xB-XgD"/>
                             <constraint firstItem="VHA-kJ-bXk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="reZ-rr-ndB"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Oz-qc-CDR" secondAttribute="trailing" id="uS1-SO-OkE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="VHA-kJ-bXk" id="Z3p-pk-aaI"/>
-                        <outlet property="containerView" destination="5Oz-qc-CDR" id="Ac0-9g-4yl"/>
-                        <outlet property="containerViewHeight" destination="stB-sa-L8H" id="R0l-13-Pkp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -81,13 +69,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-P4-n3G">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-P4-n3G">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-7j-mRB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-jb-m3l" customClass="MusicDetailView" customModule="MuSJc" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxH-tX-8xA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gab-uE-bx5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCM-vX-jjF">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="766"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xCY-xq-qx5">
+                                                <rect key="frame" x="0.0" y="0.0" width="174" height="766"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="regular"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="regular"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-b1-Dbq">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <subviews>
@@ -101,7 +116,7 @@
                                                     <constraint firstAttribute="width" secondItem="tct-Lm-XrS" secondAttribute="height" id="w6o-bc-WCF"/>
                                                 </constraints>
                                                 <color key="tintColor" name="appWhite"/>
-                                                <state key="normal" image="chevron.down" catalog="system"/>
+                                                <state key="normal" image="Dropdown"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lo-fi OST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBu-bA-gz9">
                                                 <rect key="frame" x="40" y="0.0" width="293" height="40"/>
@@ -116,7 +131,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="WsQ-R5-T4g"/>
                                                 </constraints>
                                                 <color key="tintColor" name="appWhite"/>
-                                                <state key="normal" image="see_all"/>
+                                                <state key="normal" image="square.grid.3x2" catalog="system">
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -129,35 +146,39 @@
                                     <constraint firstItem="aIJ-mA-UhJ" firstAttribute="centerY" secondItem="ReL-b1-Dbq" secondAttribute="centerY" id="m7D-nj-24T"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-jb-m3l" customClass="MusicDetailView" customModule="MuSJc" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qcl-7j-mRB" firstAttribute="trailing" secondItem="9uw-P4-n3G" secondAttribute="trailing" id="ABu-g1-qvB"/>
                             <constraint firstItem="rSj-G8-v9B" firstAttribute="trailing" secondItem="Bcg-jb-m3l" secondAttribute="trailing" id="Bat-Mk-ISj"/>
                             <constraint firstItem="9uw-P4-n3G" firstAttribute="top" secondItem="qd4-DQ-k0m" secondAttribute="top" id="CzQ-U5-sfW"/>
                             <constraint firstItem="Bcg-jb-m3l" firstAttribute="top" secondItem="ReL-b1-Dbq" secondAttribute="bottom" id="EIe-sV-nE8"/>
                             <constraint firstItem="rSj-G8-v9B" firstAttribute="trailing" secondItem="9uw-P4-n3G" secondAttribute="trailing" id="ERa-Wk-MzS"/>
-                            <constraint firstItem="rSj-G8-v9B" firstAttribute="bottom" secondItem="9uw-P4-n3G" secondAttribute="bottom" id="GCP-NG-eF1"/>
                             <constraint firstItem="rSj-G8-v9B" firstAttribute="trailing" secondItem="ReL-b1-Dbq" secondAttribute="trailing" id="JO0-bA-kGE"/>
                             <constraint firstItem="qcl-7j-mRB" firstAttribute="bottom" secondItem="9uw-P4-n3G" secondAttribute="bottom" id="Jll-ZO-NPJ"/>
+                            <constraint firstItem="rSj-G8-v9B" firstAttribute="trailing" secondItem="uxH-tX-8xA" secondAttribute="trailing" id="LBz-eX-4Uf"/>
                             <constraint firstItem="qcl-7j-mRB" firstAttribute="leading" secondItem="9uw-P4-n3G" secondAttribute="leading" id="Lo9-3i-oxt"/>
+                            <constraint firstItem="uxH-tX-8xA" firstAttribute="leading" secondItem="rSj-G8-v9B" secondAttribute="leading" id="RXG-vk-0mX"/>
+                            <constraint firstAttribute="bottom" secondItem="uxH-tX-8xA" secondAttribute="bottom" id="SJZ-FF-N9X"/>
                             <constraint firstItem="Bcg-jb-m3l" firstAttribute="leading" secondItem="rSj-G8-v9B" secondAttribute="leading" id="aIx-3E-ibf"/>
                             <constraint firstItem="ReL-b1-Dbq" firstAttribute="top" secondItem="rSj-G8-v9B" secondAttribute="top" id="iCy-hN-w38"/>
+                            <constraint firstItem="uxH-tX-8xA" firstAttribute="top" secondItem="qd4-DQ-k0m" secondAttribute="top" id="jK8-0c-ZQh"/>
                             <constraint firstItem="qcl-7j-mRB" firstAttribute="top" secondItem="9uw-P4-n3G" secondAttribute="top" id="kWe-Xg-JNy"/>
                             <constraint firstItem="rSj-G8-v9B" firstAttribute="bottom" secondItem="Bcg-jb-m3l" secondAttribute="bottom" id="plN-GB-6O8"/>
                             <constraint firstItem="ReL-b1-Dbq" firstAttribute="leading" secondItem="rSj-G8-v9B" secondAttribute="leading" id="qIW-gJ-sJu"/>
+                            <constraint firstItem="9uw-P4-n3G" firstAttribute="height" secondItem="qd4-DQ-k0m" secondAttribute="height" multiplier="1/2" id="tXr-JW-JJ1"/>
                             <constraint firstItem="9uw-P4-n3G" firstAttribute="leading" secondItem="rSj-G8-v9B" secondAttribute="leading" id="ult-fg-1E2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rSj-G8-v9B"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImage" destination="9uw-P4-n3G" id="hwV-lW-Hl7"/>
+                        <outlet property="dropDownButton" destination="tct-Lm-XrS" id="3xD-9S-1WW"/>
                         <outlet property="musicDetailView" destination="Bcg-jb-m3l" id="Y1n-Ro-QEe"/>
                         <outlet property="overlayView" destination="qcl-7j-mRB" id="217-a3-LsL"/>
+                        <outlet property="threeDotsButton" destination="fFU-6O-zdP" id="tqI-Sw-yPf"/>
+                        <outlet property="topBarLabel" destination="YBu-bA-gz9" id="bOb-YC-QeA"/>
+                        <outlet property="visualEffectView" destination="uxH-tX-8xA" id="Gme-9H-Er0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxT-KI-07E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -166,12 +187,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Dropdown" width="22" height="12"/>
         <image name="background" width="1920" height="1080"/>
-        <image name="chevron.down" catalog="system" width="128" height="72"/>
-        <image name="see_all" width="200" height="200"/>
-        <namedColor name="appGray">
-            <color red="0.28200000524520874" green="0.28200000524520874" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="square.grid.3x2" catalog="system" width="128" height="80"/>
         <namedColor name="appWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

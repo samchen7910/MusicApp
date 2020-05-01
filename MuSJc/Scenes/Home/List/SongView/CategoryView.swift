@@ -7,12 +7,15 @@
 //
 
 import UIKit
-import Hero
 
 class CategoryView: UICollectionViewCell {
 	
 	@IBOutlet weak var overlayView: UIView!
-	@IBOutlet weak var backgroundImageView: UIImageView!
+	@IBOutlet weak var backgroundImageView: UIImageView! {
+		didSet {
+			backgroundImageView.hero.id = "CategoryViewImage"
+		}
+	}
 	
 	static var identifier: String {
 		return String(describing: CategoryView.self)
@@ -34,8 +37,13 @@ class CategoryView: UICollectionViewCell {
 	func setUp() {
 		self.layer.cornerRadius = 25
 		self.layer.masksToBounds = true
-		backgroundImageView.hero.id = "CategoryViewImage"
 	}
 
+	func prepareForHeroTransition() {
+		backgroundImageView.hero.isEnabled = true
+	}
 	
+	func disableHero() {
+		backgroundImageView.hero.isEnabled = false
+	}
 }

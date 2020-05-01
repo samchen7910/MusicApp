@@ -12,6 +12,8 @@
 		E85724EA245C566200E73C8C /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724E9245C566200E73C8C /* HomeContainerViewController.swift */; };
 		E85724ED245C57E100E73C8C /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85724EC245C57E100E73C8C /* CategoryView.xib */; };
 		E85724EF245C57F400E73C8C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724EE245C57F400E73C8C /* CategoryView.swift */; };
+		E85724F1245CD43B00E73C8C /* SmallMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724F0245CD43B00E73C8C /* SmallMenuView.swift */; };
+		E85724F4245CD46100E73C8C /* SmallMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85724F3245CD46100E73C8C /* SmallMenuView.xib */; };
 		E8875C3A24546F8800A6FA62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8875C3924546F8800A6FA62 /* AppDelegate.swift */; };
 		E8875C4124546F8800A6FA62 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8875C3F24546F8800A6FA62 /* Home.storyboard */; };
 		E8875C4324546F8A00A6FA62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8875C4224546F8A00A6FA62 /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		E85724E9245C566200E73C8C /* HomeContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
 		E85724EC245C57E100E73C8C /* CategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		E85724EE245C57F400E73C8C /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		E85724F0245CD43B00E73C8C /* SmallMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallMenuView.swift; sourceTree = "<group>"; };
+		E85724F3245CD46100E73C8C /* SmallMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallMenuView.xib; sourceTree = "<group>"; };
 		E8875C3624546F8800A6FA62 /* MuSJc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuSJc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8875C3924546F8800A6FA62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8875C4024546F8800A6FA62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -169,6 +173,15 @@
 				E85724EE245C57F400E73C8C /* CategoryView.swift */,
 			);
 			path = SongView;
+			sourceTree = "<group>";
+		};
+		E85724F2245CD44300E73C8C /* SmallMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				E85724F0245CD43B00E73C8C /* SmallMenuView.swift */,
+				E85724F3245CD46100E73C8C /* SmallMenuView.xib */,
+			);
+			path = SmallMenuView;
 			sourceTree = "<group>";
 		};
 		E8875C2D24546F8800A6FA62 = {
@@ -286,6 +299,7 @@
 		E8875C7B245498EF00A6FA62 /* MusicDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E85724F2245CD44300E73C8C /* SmallMenuView */,
 				E8875C9F2458ADF700A6FA62 /* SmallPlayer */,
 				E8875C9A245799DB00A6FA62 /* MusicDetailView */,
 				E8875C8B2454DA4E00A6FA62 /* PlayerCustomView */,
@@ -445,6 +459,7 @@
 				E85724ED245C57E100E73C8C /* CategoryView.xib in Resources */,
 				E8875C8D2454DA7000A6FA62 /* PlayerCustomView.xib in Resources */,
 				E8875C9C24579F3500A6FA62 /* MusicDetailView.xib in Resources */,
+				E85724F4245CD46100E73C8C /* SmallMenuView.xib in Resources */,
 				E8875CA12458B49300A6FA62 /* SmallPlayerCustomView.xib in Resources */,
 				E8875C4624546F8A00A6FA62 /* LaunchScreen.storyboard in Resources */,
 				E8875C4324546F8A00A6FA62 /* Assets.xcassets in Resources */,
@@ -553,6 +568,7 @@
 				E8875C6924547E8C00A6FA62 /* SharedAssembly.swift in Sources */,
 				E8875C632454784F00A6FA62 /* ApplicationFirebaseProtocol.swift in Sources */,
 				E8875C7224548A2B00A6FA62 /* TopViewControllerProvider.swift in Sources */,
+				E85724F1245CD43B00E73C8C /* SmallMenuView.swift in Sources */,
 				E8875C922454E78300A6FA62 /* Extensions+UIView.swift in Sources */,
 				E85724EF245C57F400E73C8C /* CategoryView.swift in Sources */,
 				E8875CB22458CC8D00A6FA62 /* TabBarItem.swift in Sources */,
