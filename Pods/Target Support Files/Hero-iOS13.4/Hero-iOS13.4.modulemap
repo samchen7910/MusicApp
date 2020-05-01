@@ -1,0 +1,7 @@
+module Hero {
+  umbrella header "Hero-iOS13.4-umbrella.h"
+  exclude header "Hero-iOS11.0-umbrella.h"
+
+  export *
+  module * { export * }
+}
