@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 //sourcery: AutoMockable
 protocol ListViewControllerProtocol: class, UIViewControllerRouting {
@@ -17,24 +18,41 @@ class ListViewController: UIViewController {
 	
 	@IBOutlet weak var containerView: UIView!
 	@IBOutlet weak var containerViewHeight: NSLayoutConstraint!
+	@IBOutlet weak var collectionView: UICollectionView!
 	
-	private weak var subViewController: UIViewController?
+	private weak var subViewController: UIViewController? // To do: should remove?
 	var swipeDown: UISwipeGestureRecognizer?
 	var swipeUp: UISwipeGestureRecognizer?
 	var isShowing: Bool = false
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		setUpCollectionView()
+	}
+	
+
+	
+	private func setUpCollectionView() {
+		collectionView.dataSource = self
+		collectionView.delegate = self
 		
+		collectionView.register(UINib(nibName: CategoryView.identifier, bundle: nil),
+								forCellWithReuseIdentifier: CategoryView.identifier)
+		
+		setupCollectionViewLayout()
 	}
 	
-	@IBOutlet weak var openMusicButton: UIButton! {
-		didSet {
-			openMusicButton.addTarget(self, action: #selector(openMusicDetail), for: .touchUpInside)
+	private func setupCollectionViewLayout() {
+		guard let flow = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+			return
 		}
+		flow.minimumLineSpacing = view.frame.width * 0.1
+		flow.itemSize = CGSize(width: view.frame.width * 0.8, height: view.frame.height * 0.4)
 	}
 	
-	@objc func openMusicDetail() {
+	
+	
+	func openMusicDetail() {
 		isShowing.toggle()
 		if isShowing {
 			// To do:
@@ -53,14 +71,35 @@ class ListViewController: UIViewController {
 			containerViewHeight.constant = self.view.frame.height
 			containerViewHeight.isActive = true
 			subViewController = songDetailVC
-			containerView.addSubview(songDetailVC.view)
-			songDetailVC.view.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
-			songDetailVC.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
-			songDetailVC.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
-			songDetailVC.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-			songDetailVC.didMove(toParent: self)
+			UIView.transition(with: containerView, duration: 0.3, options: [.transitionFlipFromTop], animations: {
+				self.containerView.addSubview(songDetailVC.view)
+				songDetailVC.view.topAnchor.constraint(equalTo: self.containerView.topAnchor).isActive = true
+				songDetailVC.view.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor).isActive = true
+				songDetailVC.view.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor).isActive = true
+				songDetailVC.view.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor).isActive = true
+				songDetailVC.didMove(toParent: self)
+			}, completion: nil)
+			
 		}
 	}
+}
+
+extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		return 3
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryView.identifier, for: indexPath) as? CategoryView else {
+			 return UICollectionViewCell()
+		}
+		return cell
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		openMusicDetail()
+	}
+	
 }
 
 extension ListViewController: SongDetailViewControllerDelegate {
@@ -80,7 +119,11 @@ extension ListViewController: SongDetailViewControllerDelegate {
 		}
 		
 		let duration: TimeInterval = (animated) ? 0.5 : 0.0
+		self.containerView.alpha = 0
 		UIView.animate(withDuration: duration, animations: {
+			self.containerView.alpha = 1
+			self.containerView.layer.cornerRadius = 45
+			self.containerView.layer.maskedCorners = [.layerMinXMinYCorner]
 			self.containerViewHeight?.constant = containerHeight
 			self.containerViewHeight?.isActive = true
 			self.view.layoutIfNeeded()

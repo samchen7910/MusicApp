@@ -83,6 +83,7 @@ private extension MusicDetailView {
 		swipeUp?.direction = .up
 		self.contentView.addGestureRecognizer(swipeDown!)
 		self.contentView.addGestureRecognizer(swipeUp!)
-		
+		self.smallerPlayerView.layer.cornerRadius = 45
+		self.smallerPlayerView.layer.maskedCorners = [.layerMinXMinYCorner]
 	}
 }

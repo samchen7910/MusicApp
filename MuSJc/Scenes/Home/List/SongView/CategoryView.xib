@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="CategoryView" customModule="MuSJc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="29n-Q5-pJ0">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </imageView>
+                <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-cl-ZD3">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dPJ-Rw-U0n">
+                    <rect key="frame" x="150.5" y="45" width="113" height="56.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Mix" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w6-2o-a0A">
+                            <rect key="frame" x="0.0" y="0.0" width="113" height="29.5"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="26"/>
+                            <color key="textColor" name="appWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.345 followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hkh-b5-DGG">
+                            <rect key="frame" x="8" y="39.5" width="97.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" name="appGray"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddButton" translatesAutoresizingMaskIntoConstraints="NO" id="cuP-dR-vzT">
+                    <rect key="frame" x="343" y="15" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="76O-YA-hx2"/>
+                        <constraint firstAttribute="width" secondItem="cuP-dR-vzT" secondAttribute="height" id="Sbb-fB-qU5"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlayButton" translatesAutoresizingMaskIntoConstraints="NO" id="O62-dQ-pDZ">
+                    <rect key="frame" x="167" y="791" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="h71-lU-VGb"/>
+                        <constraint firstAttribute="width" secondItem="O62-dQ-pDZ" secondAttribute="height" id="iH3-B1-sB2"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="29n-Q5-pJ0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0IN-ho-WXW"/>
+                <constraint firstItem="aEi-cl-ZD3" firstAttribute="leading" secondItem="29n-Q5-pJ0" secondAttribute="leading" id="665-8i-7ua"/>
+                <constraint firstAttribute="bottom" secondItem="29n-Q5-pJ0" secondAttribute="bottom" id="7bW-qc-ffY"/>
+                <constraint firstItem="aEi-cl-ZD3" firstAttribute="trailing" secondItem="29n-Q5-pJ0" secondAttribute="trailing" id="JO2-cR-4Rg"/>
+                <constraint firstItem="dPJ-Rw-U0n" firstAttribute="centerX" secondItem="29n-Q5-pJ0" secondAttribute="centerX" id="S0C-mL-9MU"/>
+                <constraint firstItem="aEi-cl-ZD3" firstAttribute="top" secondItem="29n-Q5-pJ0" secondAttribute="top" id="Umy-C8-vLm"/>
+                <constraint firstAttribute="trailing" secondItem="29n-Q5-pJ0" secondAttribute="trailing" id="UpK-7S-WRO"/>
+                <constraint firstItem="29n-Q5-pJ0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VDd-Wn-xTb"/>
+                <constraint firstItem="aEi-cl-ZD3" firstAttribute="bottom" secondItem="29n-Q5-pJ0" secondAttribute="bottom" id="Xdp-SF-szi"/>
+                <constraint firstAttribute="bottom" secondItem="O62-dQ-pDZ" secondAttribute="bottom" constant="25" id="aVr-JR-uKu"/>
+                <constraint firstItem="O62-dQ-pDZ" firstAttribute="centerX" secondItem="29n-Q5-pJ0" secondAttribute="centerX" id="n8T-G8-304"/>
+                <constraint firstItem="cuP-dR-vzT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="vkJ-hc-feV"/>
+                <constraint firstAttribute="trailing" secondItem="cuP-dR-vzT" secondAttribute="trailing" constant="16" id="wVc-y6-RPV"/>
+                <constraint firstItem="dPJ-Rw-U0n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="45" id="wne-0f-LgZ"/>
+            </constraints>
+            <connections>
+                <outlet property="backgroundImageView" destination="29n-Q5-pJ0" id="EKF-HN-78u"/>
+                <outlet property="overlayView" destination="aEi-cl-ZD3" id="jzy-sV-bfF"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AddButton" width="68" height="68"/>
+        <image name="PlayButton" width="81" height="81"/>
+        <image name="background" width="1920" height="1080"/>
+        <namedColor name="appGray">
+            <color red="0.28200000524520874" green="0.28200000524520874" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 protocol SongDetailViewControllerDelegate: class {
 	func minimizeWindow(minimized: Bool, animated: Bool)
@@ -20,6 +21,7 @@ class SongDetailViewController: UIViewController {
 	
 	private weak var delegate: SongDetailViewControllerDelegate?
 	
+	@IBOutlet weak var backgroundImage: UIImageView!
 	@IBOutlet weak var overlayView: UIView! {
 		didSet {
 			overlayView.alpha = 0.25
@@ -35,13 +37,22 @@ class SongDetailViewController: UIViewController {
 		super.viewDidLoad()
 		musicDetailView.delegate = self
 		musicDetailView.backgroundColor = .clear
+		self.hero.isEnabled = true
+		backgroundImage.hero.id = "CategoryViewImage"
+
 	}
 	
 }
 
 extension SongDetailViewController: MusicDetailViewDelegate {
 	func minimizeWindow(minimized: Bool, animated: Bool) {
+		setup(minimized)
 		delegate?.minimizeWindow(minimized: minimized, animated: animated)
+	}
+	
+	func setup(_ isMinimized: Bool) {
+		overlayView.alpha = isMinimized ? 0 :  0.25
+		backgroundImage.alpha = isMinimized ? 0 : 1
 	}
 }
 
