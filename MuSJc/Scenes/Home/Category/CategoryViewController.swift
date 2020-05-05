@@ -10,11 +10,12 @@ import UIKit
 import Hero
 
 //sourcery: AutoMockable
-protocol ListViewControllerProtocol: class, UIViewControllerRouting {
+protocol CategoryViewControllerProtocol: class, UIViewControllerRouting {
 	
 }
 
-class ListViewController: UIViewController {
+class CategoryViewController: UIViewController {
+	
 	@IBOutlet weak var collectionView: UICollectionView!
 	
 	var swipeDown: UISwipeGestureRecognizer?
@@ -56,7 +57,7 @@ class ListViewController: UIViewController {
 	}
 }
 
-extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CategoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return 3
 	}
@@ -84,7 +85,7 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
 	
 }
 
-extension ListViewController {
+extension CategoryViewController {
 	
 	//	func isMinimized() -> Bool {
 	//		return CGFloat((self.view.frame.origin.y)) > CGFloat(20)
@@ -113,7 +114,7 @@ extension ListViewController {
 	//	}
 }
 
-extension ListViewController: ListViewControllerProtocol {
+extension CategoryViewController: CategoryViewControllerProtocol {
 	
 }
 

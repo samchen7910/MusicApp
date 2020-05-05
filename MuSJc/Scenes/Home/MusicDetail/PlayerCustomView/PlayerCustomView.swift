@@ -19,7 +19,17 @@ class PlayerCustomView: UIView, CustomViewProtocol {
 		}
 	}
 	@IBOutlet weak var discImageView: UIImageView!
-	
+	@IBOutlet weak var previousButton: UIButton! {
+		   didSet {
+			   previousButton.addTarget(self, action: #selector(previousSong), for: .touchUpInside)
+		   }
+	   }
+	@IBOutlet weak var nextButton: UIButton! {
+		didSet {
+			nextButton.addTarget(self, action: #selector(nextSong), for: .touchUpInside)
+		}
+	}
+	@IBOutlet weak var audioSliderView: AudioPlayerSlider!
 	// MARK: - Private
 	private var isPlaying = false
 	
@@ -48,5 +58,13 @@ class PlayerCustomView: UIView, CustomViewProtocol {
 				self.discImageView.layer.removeAnimation(forKey: "rotationAnimation")
 			}
 		}
+	}
+	
+	@objc func nextSong() {
+		audioSliderView.value += 0.15
+	}
+	
+	@objc func previousSong() {
+		audioSliderView.value -= 0.15
 	}
 }

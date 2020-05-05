@@ -14,7 +14,6 @@
                 <outlet property="containerView" destination="nft-cY-aiK" id="ctv-ww-AfQ"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="cS1-yd-3rJ"/>
                 <outlet property="overlayView" destination="7rD-3p-nfd" id="Y7D-wO-tt2"/>
-                <outlet property="smallerPlayerView" destination="AsK-mQ-JWW" id="63D-h0-XHz"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -42,32 +41,12 @@
                         <constraint firstAttribute="trailing" secondItem="PUY-eu-wq2" secondAttribute="trailing" id="YZP-3v-Hgg"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgc-6x-j7o">
-                    <rect key="frame" x="0.0" y="772" width="414" height="90"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AsK-mQ-JWW" customClass="SmallPlayerCustomView" customModule="MuSJc" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
-                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="AsK-mQ-JWW" firstAttribute="height" secondItem="Lgc-6x-j7o" secondAttribute="height" id="O8o-F9-H69"/>
-                        <constraint firstItem="AsK-mQ-JWW" firstAttribute="centerX" secondItem="Lgc-6x-j7o" secondAttribute="centerX" id="QIr-Vl-SF9"/>
-                        <constraint firstItem="AsK-mQ-JWW" firstAttribute="width" secondItem="Lgc-6x-j7o" secondAttribute="width" id="Qsc-hm-YU4"/>
-                        <constraint firstItem="AsK-mQ-JWW" firstAttribute="centerY" secondItem="Lgc-6x-j7o" secondAttribute="centerY" id="lVM-Xb-g9F"/>
-                        <constraint firstAttribute="height" constant="90" id="tkg-3p-eQh"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lgc-6x-j7o" secondAttribute="trailing" id="2ba-zp-yx0"/>
                 <constraint firstItem="7rD-3p-nfd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6g4-OP-y9u"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Lgc-6x-j7o" secondAttribute="bottom" id="8xs-Bi-W85"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7rD-3p-nfd" secondAttribute="trailing" id="GZ2-Vx-9cB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7rD-3p-nfd" secondAttribute="bottom" id="XZf-Hq-VMV"/>
-                <constraint firstItem="Lgc-6x-j7o" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Z8R-bW-IZ8"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nft-cY-aiK" secondAttribute="bottom" id="cAp-qo-hpw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nft-cY-aiK" secondAttribute="trailing" id="edf-Lc-Aav"/>
                 <constraint firstItem="nft-cY-aiK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="otv-Im-vXW"/>

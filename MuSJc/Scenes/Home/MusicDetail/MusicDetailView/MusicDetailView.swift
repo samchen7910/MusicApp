@@ -23,11 +23,7 @@ class MusicDetailView: UIView, CustomViewProtocol {
 	
 	@IBOutlet weak var containerView: UIView!	
 	@IBOutlet weak var bigPlayerView: PlayerCustomView!
-	@IBOutlet weak var smallerPlayerView: SmallPlayerCustomView! {
-		didSet {
-			smallerPlayerView.alpha = 0 
-		}
-	}
+	
 	private var swipeDown: UISwipeGestureRecognizer?
 	private var swipeUp: UISwipeGestureRecognizer?
 	weak var delegate: MusicDetailViewDelegate?
@@ -41,7 +37,7 @@ class MusicDetailView: UIView, CustomViewProtocol {
 		super.init(coder: aDecoder)
 		commonInit(for: "MusicDetailView")
 	}
-
+	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		prepare()
@@ -50,7 +46,6 @@ class MusicDetailView: UIView, CustomViewProtocol {
 	func setAnimation(isSwipeDown: Bool) {
 		UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
 			self.containerView.alpha = isSwipeDown ? 0 : 1
-			self.smallerPlayerView.alpha = isSwipeDown ? 1 : 0
 		}, completion: nil)
 	}
 }
@@ -83,7 +78,6 @@ private extension MusicDetailView {
 		swipeUp?.direction = .up
 		self.contentView.addGestureRecognizer(swipeDown!)
 		self.contentView.addGestureRecognizer(swipeUp!)
-		self.smallerPlayerView.layer.cornerRadius = 45
-		self.smallerPlayerView.layer.maskedCorners = [.layerMinXMinYCorner]
+		
 	}
 }

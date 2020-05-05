@@ -50,18 +50,23 @@ class SongDetailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		visualEffectView.effect = nil
-		prepare()
 		prepareForHero()
 	}
+	
+	override func viewWillLayoutSubviews() {
+		super.viewWillLayoutSubviews()
+		prepare()
+	}
+	
 	
 	private func prepare() {
 		musicDetailView.delegate = self
 		musicDetailView.backgroundColor = .clear
-		backgroundImage.layer.cornerRadius = backgroundImage.frame.height/4
-		overlayView.layer.cornerRadius = overlayView.frame.height/4
-		overlayView.layer.maskedCorners = [.layerMaxXMaxYCorner]
-		backgroundImage.layer.maskedCorners = [.layerMaxXMaxYCorner]
-		backgroundImage.layer.masksToBounds = true
+		//		backgroundImage.layer.cornerRadius = backgroundImage.frame.height/4
+		//		overlayView.layer.cornerRadius = overlayView.frame.height/4
+		//		overlayView.layer.maskedCorners = [.layerMaxXMaxYCorner]
+		//		backgroundImage.layer.maskedCorners = [.layerMaxXMaxYCorner]
+		//		backgroundImage.layer.masksToBounds = true
 	}
 	
 	func prepareForHero() {
@@ -95,6 +100,7 @@ class SongDetailViewController: UIViewController {
 
 extension SongDetailViewController: MusicDetailViewDelegate {
 	func minimizeWindow(minimized: Bool, animated: Bool) {
+		self.view.alpha = 0
 		dismiss(animated: true, completion: nil)
 	}
 	
@@ -116,12 +122,13 @@ private extension SongDetailViewController {
 		self.rightMenuView = rightMenuView
 		view.addSubview(self.rightMenuView!)
 		self.rightMenuView!.widthAnchor.constraint(equalToConstant: view.frame.width * 0.9).isActive = true
-		self.rightMenuView!.heightAnchor.constraint(equalToConstant: 180).isActive = true
+		self.rightMenuView!.heightAnchor.constraint(equalToConstant: 150).isActive = true
 		self.rightMenuView!.topAnchor.constraint(equalTo: threeDotsButton.bottomAnchor, constant: 8).isActive = true
 		self.rightMenuView!.trailingAnchor.constraint(equalTo: threeDotsButton.trailingAnchor, constant: -8).isActive = true
 		rightMenuView.layer.cornerRadius = 25
-		rightMenuView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMaxYCorner,.layerMaxXMaxYCorner]
+		rightMenuView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
 		rightMenuView.layer.masksToBounds = true
+		
 	}
 }
 

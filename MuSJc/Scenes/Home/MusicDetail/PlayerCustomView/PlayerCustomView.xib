@@ -10,10 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerCustomView" customModule="MuSJc" customModuleProvider="target">
             <connections>
+                <outlet property="audioSliderView" destination="cNL-uM-PmJ" id="XYo-hL-I2D"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="Gsx-tf-nM6"/>
                 <outlet property="discImageView" destination="WGF-5c-TEN" id="aiv-84-kxs"/>
                 <outlet property="needleContainerView" destination="kfV-qq-PRe" id="qhA-n9-X8Y"/>
                 <outlet property="needleView" destination="ccZ-oJ-UeU" id="G4e-U1-Miy"/>
+                <outlet property="nextButton" destination="xkE-aR-SU2" id="s3Y-xs-uJ4"/>
+                <outlet property="previousButton" destination="k2p-Zx-q8P" id="XYd-FI-N25"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -86,9 +89,9 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-uM-PmJ">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-uM-PmJ" customClass="AudioPlayerSlider" customModule="MuSJc" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="84.5" width="339" height="20"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="X1V-ni-7Bo"/>
                             </constraints>
@@ -102,7 +105,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2p-Zx-q8P">
                                             <rect key="frame" x="0.0" y="24" width="20" height="22"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="backward.end.fill" catalog="system"/>
+                                            <state key="normal" image="Previous"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGu-pF-gtd">
                                             <rect key="frame" x="50" y="0.0" width="70" height="70"/>
@@ -111,13 +114,13 @@
                                                 <constraint firstAttribute="width" secondItem="AGu-pF-gtd" secondAttribute="height" id="Hh7-BU-qQ6"/>
                                             </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="play.fill" catalog="system"/>
+                                            <state key="normal" image="Play"/>
                                             <state key="selected" image="pause.fill" catalog="system"/>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkE-aR-SU2">
                                             <rect key="frame" x="150" y="24" width="20" height="22"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <state key="normal" image="forward.end.fill" catalog="system"/>
+                                            <state key="normal" image="Next"/>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -150,9 +153,9 @@
     </objects>
     <resources>
         <image name="Disc" width="1024" height="1024"/>
-        <image name="backward.end.fill" catalog="system" width="128" height="102"/>
-        <image name="forward.end.fill" catalog="system" width="128" height="102"/>
+        <image name="Next" width="20" height="20"/>
+        <image name="Play" width="96" height="96"/>
+        <image name="Previous" width="20" height="20"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
-        <image name="play.fill" catalog="system" width="116" height="128"/>
     </resources>
 </document>
