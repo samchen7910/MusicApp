@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EsT-vW-mvG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VHA-kJ-bXk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ile-he-vjm">
                                     <size key="itemSize" width="128" height="128"/>
@@ -53,13 +53,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="WkO-kh-Erm"/>
                     <connections>
                         <outlet property="collectionView" destination="VHA-kJ-bXk" id="Z3p-pk-aaI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1616" y="124"/>
+            <point key="canvasLocation" x="4346.376811594203" y="123.88392857142857"/>
         </scene>
         <!--Song List View Controller-->
         <scene sceneID="Qdp-h3-kYh">
@@ -69,12 +70,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-86-Cje">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="yIc-86-Cje">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="251"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3H7-EV-5Is">
                                 <rect key="frame" x="0.0" y="251" width="414" height="611"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MdP-Zl-5lq">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -84,7 +85,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="appWhite"/>
                         <constraints>
                             <constraint firstItem="9i1-OE-Opu" firstAttribute="trailing" secondItem="yIc-86-Cje" secondAttribute="trailing" id="K0v-0E-e1Y"/>
                             <constraint firstItem="9i1-OE-Opu" firstAttribute="trailing" secondItem="3H7-EV-5Is" secondAttribute="trailing" id="LAO-L2-8KN"/>
@@ -104,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfs-ZL-hMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2427" y="126"/>
+            <point key="canvasLocation" x="5156.521739130435" y="125.89285714285714"/>
         </scene>
         <!--Song Detail View Controller-->
         <scene sceneID="aID-1p-f9n">
@@ -171,12 +172,13 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-6O-zdP">
                                                 <rect key="frame" x="333" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fFU-6O-zdP" secondAttribute="height" id="SrP-54-8s6"/>
                                                     <constraint firstAttribute="width" constant="40" id="WsQ-R5-T4g"/>
                                                 </constraints>
                                                 <color key="tintColor" name="appWhite"/>
-                                                <state key="normal" image="square.grid.3x2" catalog="system">
+                                                <state key="normal" image="3dots">
                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -228,13 +230,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxT-KI-07E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3361" y="122"/>
+            <point key="canvasLocation" x="6091.304347826087" y="121.875"/>
+        </scene>
+        <!--Application Navigation Controller-->
+        <scene sceneID="CcR-yf-iXt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EsT-vW-mvG" customClass="ApplicationNavigationController" customModule="MuSJc" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dma-21-iq8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VP7-xH-Q10"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5q-qG-VWe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3436.2318840579715" y="123.88392857142857"/>
         </scene>
     </scenes>
     <resources>
+        <image name="3dots" width="28" height="5"/>
         <image name="Dropdown" width="22" height="12"/>
         <image name="background" width="1920" height="1080"/>
-        <image name="square.grid.3x2" catalog="system" width="128" height="80"/>
         <namedColor name="appWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

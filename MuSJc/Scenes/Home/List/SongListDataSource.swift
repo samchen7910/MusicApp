@@ -15,6 +15,12 @@ class SongListDataSource: NSObject, UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		<#code#>
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SongView.identifier, for: indexPath) as? SongView else {
+			return UICollectionViewCell()
+		}
+		
+		// To do
+		
+		return cell
 	}
 }

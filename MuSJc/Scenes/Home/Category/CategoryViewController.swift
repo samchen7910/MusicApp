@@ -22,6 +22,7 @@ class CategoryViewController: UIViewController {
 	var swipeUp: UISwipeGestureRecognizer?
 	var isShowing: Bool = false
 	var currentSelectedIndexPath: IndexPath?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		setUpCollectionView()
@@ -30,7 +31,7 @@ class CategoryViewController: UIViewController {
 	private func setUpCollectionView() {
 		collectionView.dataSource = self
 		collectionView.delegate = self
-		
+		self.isHeroEnabled = true
 		collectionView.register(UINib(nibName: CategoryView.identifier, bundle: nil),
 								forCellWithReuseIdentifier: CategoryView.identifier)
 		
@@ -47,13 +48,16 @@ class CategoryViewController: UIViewController {
 	
 	
 	
-	func openMusicDetail() {
-		guard let songDetailVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SongDetailViewController") as? SongDetailViewController else {
+	func openSongList() {
+		guard let songListVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "SongListViewController") as? SongListViewController else {
 			return assertionFailure("Can't retrieve SongDetailVC")
 		}
 		
-		songDetailVC.modalPresentationStyle = .overFullScreen
-		self.present(songDetailVC, animated: true, completion: nil)
+//		songListVC.modalPresentationStyle = .overCurrentContext
+//		songListVC.hero.modalAnimationType = .auto
+//		present(songListVC, animated: true, completion: nil)
+		navigationController?.hero.isEnabled = true
+		navigationController?.pushViewController(songListVC, animated: true)
 	}
 }
 
@@ -79,7 +83,7 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
 			return
 		}
 		cell.prepareForHeroTransition()
-		openMusicDetail()
+		openSongList()
 		
 	}
 	

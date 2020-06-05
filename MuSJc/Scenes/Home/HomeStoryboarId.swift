@@ -11,14 +11,17 @@ import Foundation
 enum HomeStoryboardId: StoryboardId {
 	
 	case detail
+	case category
 	case list
 	
 	var identifier: String {
 		switch self {
 		case .detail:
 			return "SongDetailViewController"
-		case .list:
+		case .category:
 			return "ListViewController"
+		case .list:
+			return "SongListViewController"
 		}
 	}
 }

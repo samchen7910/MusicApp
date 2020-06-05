@@ -12,6 +12,8 @@
 		E81F03A6245E3962001E7369 /* AudioPlayerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F03A5245E3962001E7369 /* AudioPlayerSlider.swift */; };
 		E81F03A924621CD0001E7369 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F03A824621CD0001E7369 /* SongListViewController.swift */; };
 		E81F03AB24621DA5001E7369 /* SongListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F03AA24621DA5001E7369 /* SongListDataSource.swift */; };
+		E81F03AF2464C00A001E7369 /* SongView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81F03AE2464C00A001E7369 /* SongView.xib */; };
+		E81F03B12464C023001E7369 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F03B02464C023001E7369 /* SongView.swift */; };
 		E85724EA245C566200E73C8C /* HomeContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724E9245C566200E73C8C /* HomeContainerViewController.swift */; };
 		E85724ED245C57E100E73C8C /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E85724EC245C57E100E73C8C /* CategoryView.xib */; };
 		E85724EF245C57F400E73C8C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85724EE245C57F400E73C8C /* CategoryView.swift */; };
@@ -75,6 +77,8 @@
 		E81F03A5245E3962001E7369 /* AudioPlayerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerSlider.swift; sourceTree = "<group>"; };
 		E81F03A824621CD0001E7369 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
 		E81F03AA24621DA5001E7369 /* SongListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListDataSource.swift; sourceTree = "<group>"; };
+		E81F03AE2464C00A001E7369 /* SongView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongView.xib; sourceTree = "<group>"; };
+		E81F03B02464C023001E7369 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		E85724E9245C566200E73C8C /* HomeContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerViewController.swift; sourceTree = "<group>"; };
 		E85724EC245C57E100E73C8C /* CategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		E85724EE245C57F400E73C8C /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		E81F03AC24621EDB001E7369 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				E81F03AE2464C00A001E7369 /* SongView.xib */,
+				E81F03B02464C023001E7369 /* SongView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 				E8875C8D2454DA7000A6FA62 /* PlayerCustomView.xib in Resources */,
 				E8875C9C24579F3500A6FA62 /* MusicDetailView.xib in Resources */,
 				E85724F4245CD46100E73C8C /* SmallMenuView.xib in Resources */,
+				E81F03AF2464C00A001E7369 /* SongView.xib in Resources */,
 				E8875CA12458B49300A6FA62 /* SmallPlayerCustomView.xib in Resources */,
 				E8875C4624546F8A00A6FA62 /* LaunchScreen.storyboard in Resources */,
 				E8875C4324546F8A00A6FA62 /* Assets.xcassets in Resources */,
@@ -613,6 +620,7 @@
 				E8875C922454E78300A6FA62 /* Extensions+UIView.swift in Sources */,
 				E81F03AB24621DA5001E7369 /* SongListDataSource.swift in Sources */,
 				E81F03A924621CD0001E7369 /* SongListViewController.swift in Sources */,
+				E81F03B12464C023001E7369 /* SongView.swift in Sources */,
 				E81F03A6245E3962001E7369 /* AudioPlayerSlider.swift in Sources */,
 				E85724EF245C57F400E73C8C /* CategoryView.swift in Sources */,
 				E8875CB22458CC8D00A6FA62 /* TabBarItem.swift in Sources */,
